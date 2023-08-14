@@ -4,6 +4,7 @@ return {
     ensure_installed = {
       "sourcery",
       "black",
+      "stylelua"
     },
   },
 }
