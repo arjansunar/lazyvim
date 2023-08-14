@@ -4,7 +4,9 @@ return {
     ensure_installed = {
       "sourcery",
       "black",
-      "stylua"
+      "prettierd",
+      "stylua",
+      "emmet_ls",
     },
   },
 }
