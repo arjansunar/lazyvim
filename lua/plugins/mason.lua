@@ -6,7 +6,6 @@ return {
       "black",
       "prettierd",
       "stylua",
-      "emmet_ls",
     },
   },
 }
