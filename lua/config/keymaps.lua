@@ -2,5 +2,9 @@
 -- Default keymaps that are always set: https://github.com/LazyVim/LazyVim/blob/main/lua/lazyvim/config/keymaps.lua
 -- Add any additional keymaps here
 
+local map = vim.keymap.set
 -- exit insert mode with jk
-vim.keymap.set("i", "jk", "<ESC>", { noremap = true, silent = true, desc = "<ESC>" })
+map("i", "jk", "<ESC>", { noremap = true, silent = true, desc = "<ESC>" })
+
+-- quit
+map("n", "<C-q>", "<cmd>qa<cr>", { desc = "Quit all" })
