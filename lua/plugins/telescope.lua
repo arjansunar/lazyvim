@@ -1,7 +1,6 @@
 return {
   "nvim-telescope/telescope.nvim",
   keys = {
-    -- add a keymap to browse plugin files
     {
       "<leader>gt",
       "<cmd>Telescope git_status<cr>",
