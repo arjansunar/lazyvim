@@ -8,3 +8,4 @@ map("i", "jk", "<ESC>", { noremap = true, silent = true, desc = "<ESC>" })
 
 -- quit
 map("n", "<C-q>", "<cmd>qa<cr>", { desc = "Quit all" })
+map("n", "<leader>w", "<cmd>:w<cr>", { desc = "Save to file" })
