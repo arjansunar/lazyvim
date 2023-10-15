@@ -8,7 +8,7 @@ return {
     --
     keywords = {
       REFAC = { icon = "🚩", color = "error", alt = { "REFACTOR", "REF" } },
-      TORM = { icon = "🪣", color = "error", alt = { "TO-RM", "REMOVE" } },
+      TORM = { icon = "🪣", color = "error", alt = { "REMOVE" } },
     },
   },
 }
