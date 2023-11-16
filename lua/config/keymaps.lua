@@ -6,5 +6,5 @@ local map = vim.keymap.set
 -- exit insert mode with jk
 map("i", "jk", "<ESC>", { noremap = true, silent = true, desc = "<ESC>" })
 
--- save to file
-map("n", "<leader>w", "<cmd>:w<cr>", { desc = "Save to file" })
+-- map ; to :
+map("n", ";", ":", { noremap = true, silent = true })
