@@ -22,3 +22,5 @@ map("n", "<leader>U", function()
   local start_row, start_col, end_row, end_col = node:range()
   vim.api.nvim_buf_set_text(0, start_row, start_col, end_row, end_col, { new_text })
 end, { noremap = true, silent = true })
+
+map("n", "<leader>cs", '<cmd>s/"/`/g<cr>', { noremap = true, silent = true, desc = 'Convert " to `' })
