@@ -24,3 +24,10 @@ map("n", "<leader>U", function()
 end, { noremap = true, silent = true })
 
 map("n", "<leader>cs", '<cmd>s/"/`/g<cr>', { noremap = true, silent = true, desc = 'Convert " to `' })
+
+map(
+  "n",
+  "<Leader>nf",
+  ":lua require('neogen').generate({ type = 'func' })<CR>",
+  { noremap = true, silent = true, desc = "Genrate func docs" }
+)
