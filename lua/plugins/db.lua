@@ -6,5 +6,6 @@ return {
       { "kristijanhusak/vim-dadbod-completion", lazy = true, ft = { "sql", "mysql", "plsql" } },
     },
     cmd = { "DBUI", "DBUIFindBuffer" },
+    enable = false,
   },
 }
