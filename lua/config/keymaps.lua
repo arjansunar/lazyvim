@@ -31,3 +31,21 @@ map(
   ":lua require('neogen').generate({ type = 'func' })<CR>",
   { noremap = true, silent = true, desc = "Genrate func docs" }
 )
+
+local function insertOnTop(line)
+  -- Go to the top of the file
+  vim.cmd("normal! gg")
+  -- Insert the specified string if it's not already there
+  local firstLine = vim.fn.getline(1)
+  if not firstLine:match("^" .. line) then
+    vim.fn.append(0, line)
+  end
+end
+
+map("n", "<Leader>nuc", function()
+  insertOnTop('"use client";')
+end, { noremap = true, silent = true, desc = "Insert use client" })
+
+map("n", "<Leader>nus", function()
+  insertOnTop('"use server";')
+end, { noremap = true, silent = true, desc = "Insert use client" })
