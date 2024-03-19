@@ -43,9 +43,9 @@ local function insertOnTop(line)
 end
 
 map("n", "<Leader>nuc", function()
-  insertOnTop('"use client";')
+  insertOnTop('"use client";\n')
 end, { noremap = true, silent = true, desc = "Insert use client" })
 
 map("n", "<Leader>nus", function()
-  insertOnTop('"use server";')
+  insertOnTop('"use server";\n')
 end, { noremap = true, silent = true, desc = "Insert use client" })
