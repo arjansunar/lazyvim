@@ -43,9 +43,13 @@ local function insertOnTop(line)
 end
 
 map("n", "<Leader>nuc", function()
-  insertOnTop('"use client";\n')
+  insertOnTop('"use client";')
 end, { noremap = true, silent = true, desc = "Insert use client" })
 
 map("n", "<Leader>nus", function()
-  insertOnTop('"use server";\n')
+  insertOnTop('"use server";')
 end, { noremap = true, silent = true, desc = "Insert use client" })
+
+map("n", "<leader>gf", function()
+  vim.lsp.buf.format()
+end, { noremap = true, silent = true, desc = "Format buffer" })
