@@ -32,7 +32,7 @@ map(
   { noremap = true, silent = true, desc = "Genrate func docs" }
 )
 
-local function insertOnTop(line)
+local function insert_on_top(line)
   -- Go to the top of the file
   vim.cmd("normal! gg")
   -- Insert the specified string if it's not already there
@@ -42,7 +42,7 @@ local function insertOnTop(line)
   end
 end
 
-local function PascalCaseToSnakeCase()
+local function pascal_case_to_snake_case()
   -- Get the word under the cursor
   local word = vim.fn.expand("<cword>")
 
@@ -54,17 +54,17 @@ local function PascalCaseToSnakeCase()
 end
 
 map("n", "<Leader>nuc", function()
-  insertOnTop('"use client";')
+  insert_on_top('"use client";')
 end, { noremap = true, silent = true, desc = "Insert use client" })
 
 map("n", "<Leader>nus", function()
-  insertOnTop('"use server";')
+  insert_on_top('"use server";')
 end, { noremap = true, silent = true, desc = "Insert use client" })
 
 map(
   "n",
   "<Leader>nsc",
-  PascalCaseToSnakeCase,
+  pascal_case_to_snake_case,
   { noremap = true, silent = true, desc = "Convert PascalCase to snake_case" }
 )
 
