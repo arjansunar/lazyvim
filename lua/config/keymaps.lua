@@ -42,6 +42,17 @@ local function insertOnTop(line)
   end
 end
 
+local function PascalCaseToSnakeCase()
+  -- Get the word under the cursor
+  local word = vim.fn.expand("<cword>")
+
+  -- Convert PascalCase to snake_case
+  local snake_case = word:gsub("(%u)", "_%1"):gsub("^_", ""):lower()
+
+  -- Replace the word with the snake_case version
+  vim.api.nvim_command("normal ciw" .. snake_case)
+end
+
 map("n", "<Leader>nuc", function()
   insertOnTop('"use client";')
 end, { noremap = true, silent = true, desc = "Insert use client" })
@@ -49,6 +60,13 @@ end, { noremap = true, silent = true, desc = "Insert use client" })
 map("n", "<Leader>nus", function()
   insertOnTop('"use server";')
 end, { noremap = true, silent = true, desc = "Insert use client" })
+
+map(
+  "n",
+  "<Leader>nsc",
+  PascalCaseToSnakeCase,
+  { noremap = true, silent = true, desc = "Convert PascalCase to snake_case" }
+)
 
 map("n", "<leader>gf", function()
   vim.lsp.buf.format()
