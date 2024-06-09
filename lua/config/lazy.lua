@@ -23,7 +23,6 @@ require("lazy").setup({
     -- formatting and fixes
     { import = "lazyvim.plugins.extras.linting.eslint" },
     { import = "lazyvim.plugins.extras.formatting.prettier" },
-    { import = "lazyvim.plugins.extras.formatting.black" },
     -- LSP
     { import = "lazyvim.plugins.extras.lsp.none-ls" },
     -- auto complete
