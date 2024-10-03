@@ -13,7 +13,6 @@ return {
       nls.builtins.formatting.sqlfmt,
       nls.builtins.formatting.ruff,
       nls.builtins.diagnostics.ruff,
-      nls.builtins.diagnostics.mypy,
     })
   end,
 }
