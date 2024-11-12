@@ -12,4 +12,5 @@ vim.o.colorcolumn = "88"
 vim.opt.foldexpr = "v:lua.vim.treesitter.foldexpr()"
 vim.opt.foldmethod = "expr"
 
-vim.g.lazyvim_python_lsp = "pyright"
+vim.g.lazyvim_python_lsp = "basedpyright"
+vim.g.lazyvim_python_ruff = "ruff"
