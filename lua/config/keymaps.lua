@@ -68,6 +68,8 @@ map(
   { noremap = true, silent = true, desc = "Convert PascalCase to snake_case" }
 )
 
+map("n", "<Leader>na", "gg<S-v>G", { noremap = true, silent = true, desc = "Select all" })
+
 map("n", "<leader>gf", function()
   vim.lsp.buf.format()
 end, { noremap = true, silent = true, desc = "Format buffer" })
