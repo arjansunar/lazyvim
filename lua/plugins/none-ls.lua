@@ -11,8 +11,6 @@ return {
       nls.builtins.formatting.stylua,
       nls.builtins.formatting.shfmt,
       nls.builtins.formatting.sqlfmt,
-      nls.builtins.formatting.ruff,
-      nls.builtins.diagnostics.ruff,
     })
   end,
 }
