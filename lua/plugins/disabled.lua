@@ -1,6 +1,6 @@
 return {
   -- {
-  --   "folke/noice.nvim",
+  --   "folke/flash.nvim",
   --   enabled = false,
   -- },
 }
