@@ -1,5 +1,4 @@
 return {
-  -- Configure the LSP for TypeScript/JavaScript using tsserver
   {
     "neovim/nvim-lspconfig",
     {
@@ -25,7 +24,6 @@ return {
       "nvimtools/none-ls-extras.nvim",
     },
     opts = function(_, opts)
-      local nls = require("null-ls")
       opts.sources = opts.sources or {}
       vim.list_extend(opts.sources, {
         require("none-ls.formatting.ruff"),

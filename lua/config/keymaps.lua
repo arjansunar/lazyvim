@@ -73,3 +73,5 @@ map("n", "<Leader>na", "gg<S-v>G", { noremap = true, silent = true, desc = "Sele
 map("n", "<leader>gf", function()
   vim.lsp.buf.format()
 end, { noremap = true, silent = true, desc = "Format buffer" })
+
+map("n", "<leader>gt", "<cmd>Telescope git_status<cr>", { noremap = true, silent = true, desc = "Git status" })
