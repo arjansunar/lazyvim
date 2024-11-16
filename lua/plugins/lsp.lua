@@ -14,6 +14,7 @@ return {
     opts = function(_, opts)
       vim.list_extend(opts.ensure_installed, {
         "ruff",
+        "black",
       })
     end,
   },
@@ -24,8 +25,10 @@ return {
       "nvimtools/none-ls-extras.nvim",
     },
     opts = function(_, opts)
+      local nls = require("null-ls")
       opts.sources = opts.sources or {}
       vim.list_extend(opts.sources, {
+        nls.builtins.formatting.black,
         require("none-ls.formatting.ruff"),
         require("none-ls.diagnostics.ruff"),
       })
